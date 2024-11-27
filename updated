@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About Me</title>
+</head>
+<body>
+    <!-- About Me Section -->
+    <h1>About Me</h1>
+    <p>Hello! Welcome to my page. This is a space to share my interests, experiences, and aspirations.</p>
+
+    <!-- Education / Achievements Section -->
+    <h2>Education / Achievements</h2>
+    <ul>
+        <li>Bachelor of Science in Computer Science</li>
+        <li>Certified in Web Development</li>
+        <li>Winner of XYZ Coding Competition</li>
+    </ul>
+
+    <!-- Course Section -->
+    <h2>Course</h2>
+    <p>Currently pursuing advanced studies in Software Engineering.</p>
+
+    <!-- IT Experience Section -->
+    <h2>IT Experience</h2>
+    <table border="1">
+        <tr>
+            <th>Role</th>
+            <th>Company</th>
+            <th>Duration</th>
+        </tr>
+        <tr>
+            <td>Intern</td>
+            <td>ABC Tech</td>
+            <td>6 months</td>
+        </tr>
+        <tr>
+            <td>Junior Developer</td>
+            <td>XYZ Solutions</td>
+            <td>1 year</td>
+        </tr>
+    </table>
+
+    <!-- Hobbies & Interests Section -->
+    <h2>Hobbies & Interests</h2>
+    <ul>
+        <li>Reading Technology Blogs</li>
+        <li>Coding and Solving Problems</li>
+        <li>Playing Chess</li>
+    </ul>
+
+    <!-- Goals In Life / Dream Section -->
+    <h2>Goals In Life / Dream</h2>
+    <p>My dream is to become a lead software engineer and contribute to innovative technologies that improve lives.</p>
+
+    <!-- Picture Gallery Section -->
+    <h2>Picture Gallery</h2>
+    <table>
+        <tr>
+            <td>
+                <img src="https://via.placeholder.com/150" alt="Picture 1">
+            </td>
+            <td>
+                <img src="https://via.placeholder.com/150" alt="Picture 2">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="https://via.placeholder.com/150" alt="Picture 3">
+            </td>
+            <td>
+                <img src="https://via.placeholder.com/150" alt="Picture 4">
+            </td>
+        </tr>
+    </table>
+
+    <!-- Link to a Related Page -->
+    <h2>Learn More</h2>
+    <p>Visit <a href="https://www.w3schools.com/html/">W3Schools HTML Guide</a> to learn more about HTML.</p>
+</body>
+</html>
