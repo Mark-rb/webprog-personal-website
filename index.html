@@ -67,11 +67,13 @@
 
         .profile-image {
             display: block;
-            margin: 0 auto 20px auto;
+            margin: 0 auto 20px;
             width: 150px;
             height: 150px;
             border-radius: 50%;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            object-fit: cover;
         }
 
         table {
@@ -124,12 +126,15 @@
         <h1>About Me</h1>
     </header>
     <main>
-        <section>
-            <h2>Picture Gallery</h2>
-            <img src="https://media.discordapp.net/attachments/1311356982304837694/1311357056288030831/me.jpg?ex=67488fee&is=67473e6e&hm=cf5b51fbc48bd65157024817ad1a2ec105b447a1faf25ca9611909255028611b&=&format=webp&width=279&height=419" 
-                alt="Profile picture of Mark Revin O. Barbon" 
-                class="profile-image">
-        </section>
+    <section>
+        <h2>Picture Gallery</h2>
+            <img src="images/me.jpg" 
+             alt="Profile picture of Mark Revin O. Barbon" 
+             class="profile-image" 
+             onerror="this.src='fallback.jpg';">
+    </section>
+
+
 
         <section>
             <h2>Education & Achievements</h2>
