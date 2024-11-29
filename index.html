@@ -5,85 +5,123 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
     <style>
+        /* Global Styles */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(120deg, #4facfe, #00f2fe);
+            color: #fff;
             margin: 0;
             padding: 0;
-            line-height: 1.6;
         }
 
-        header {
-            background: #5d5c61;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
+        h1, h2 {
+            font-weight: bold;
         }
 
         main {
+            max-width: 900px;
+            margin: 30px auto;
             padding: 20px;
-            max-width: 800px;
-            margin: 20px auto;
-            background: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
         }
 
-        h2 {
-            color: #5d5c61;
-            border-bottom: 2px solid #d3d3d3;
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            background: -webkit-linear-gradient(45deg, #ff9a9e, #fad0c4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Sections */
+        section {
+            margin-bottom: 20px;
+        }
+
+        section h2 {
+            border-bottom: 2px solid #4facfe;
+            display: inline-block;
             padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+
+        p, ul, table {
+            margin: 10px 0;
         }
 
         ul {
-            list-style-type: square;
-            padding-left: 20px;
+            list-style: none;
+            padding: 0;
         }
 
+        ul li {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+        }
+
+        /* Profile Image */
+        .profile-image {
+            display: block;
+            margin: 0 auto 20px auto;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Tables */
         table {
             width: 100%;
-            margin: 20px 0;
             border-collapse: collapse;
+            margin: 10px 0;
         }
 
         table th, table td {
-            border: 1px solid #d3d3d3;
+            border: 1px solid rgba(255, 255, 255, 0.2);
             padding: 10px;
             text-align: center;
         }
 
         table th {
-            background-color: #5d5c61;
-            color: white;
+            background: rgba(255, 255, 255, 0.2);
         }
 
-        img {
-            border-radius: 50%;
-            display: block;
-            margin: 10px auto;
+        table td {
+            background: rgba(255, 255, 255, 0.1);
         }
 
+        /* Links */
         a {
-            color: #5d5c61;
+            color: #00f2fe;
             text-decoration: none;
+            font-weight: bold;
         }
 
         a:hover {
-            text-decoration: underline;
+            color: #ff9a9e;
         }
 
+        /* Footer */
         footer {
             text-align: center;
-            background: #5d5c61;
-            color: #fff;
-            padding: 10px 0;
             margin-top: 20px;
+            padding: 10px 0;
+            background: rgba(0, 0, 0, 0.8);
+            border-top: 1px solid #4facfe;
+        }
+
+        footer p {
+            margin: 0;
+            color: #fff;
+            font-size: 0.9rem;
         }
     </style>
 </head>
@@ -92,10 +130,15 @@
         <h1>About Me</h1>
     </header>
     <main>
+        <!-- Profile Section -->
         <section>
+            <img src="https://media.discordapp.net/attachments/1311356982304837694/1311357056288030831/me.jpg?ex=67488fee&is=67473e6e&hm=cf5b51fbc48bd65157024817ad1a2ec105b447a1faf25ca9611909255028611b&=&format=webp&width=279&height=419" 
+                 alt="A person holding a camera" 
+                 class="profile-image">
             <p>Hello! I am Mark Revin O. Barbon, passionate about learning and always eager to explore new opportunities in life. Welcome to my page!</p>
         </section>
 
+        <!-- Education / Achievements -->
         <section>
             <h2>Education / Achievements</h2>
             <ul>
@@ -104,11 +147,13 @@
             </ul>
         </section>
 
+        <!-- Course -->
         <section>
             <h2>Course</h2>
             <p>Currently pursuing Information Technology Specialized in Mobile Internet.</p>
         </section>
 
+        <!-- IT Experience -->
         <section>
             <h2>IT Experience</h2>
             <table>
@@ -125,6 +170,7 @@
             </table>
         </section>
 
+        <!-- Hobbies -->
         <section>
             <h2>Hobbies & Interests</h2>
             <ul>
@@ -134,16 +180,13 @@
             </ul>
         </section>
 
+        <!-- Goals -->
         <section>
             <h2>Goals in Life / Dream</h2>
             <p>My ultimate goal is to innovate solutions that make technology more accessible and impactful. I dream of creating a startup that bridges gaps in education using AI.</p>
         </section>
 
-        <section>
-            <h2>Picture Gallery</h2>
-            <img src="https://media.discordapp.net/attachments/1311356982304837694/1311357056288030831/me.jpg?ex=67488fee&is=67473e6e&hm=cf5b51fbc48bd65157024817ad1a2ec105b447a1faf25ca9611909255028611b&=&format=webp&width=279&height=419" alt="A person holding a camera" width="150" height="150">
-        </section>
-
+        <!-- Useful Links -->
         <section>
             <h2>Useful Links</h2>
             <ul>
