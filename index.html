@@ -1,139 +1,135 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Mark Revin's Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Mark Revin O. Barbon</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f3f3f3;
-            color: #333;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #1e1e2f;
+            color: #ffffff;
         }
         header {
-            background-color: #004d99;
-            color: white;
-            padding: 20px;
             text-align: center;
-        }
-        section {
-            margin: 20px;
             padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            background-color: #282a36;
         }
-        h1, h2 {
-            color: #004d99;
+        header h1 {
+            color: #ff79c6;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #2d2f45;
+            border-radius: 10px;
+        }
+        h2 {
+            color: #50fa7b;
+            border-bottom: 2px solid #ff79c6;
+            padding-bottom: 5px;
+        }
+        ul, p {
+            margin: 10px 0;
+        }
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
         }
         table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 10px;
         }
-        table th, table td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: center;
+        table, th, td {
+            border: 1px solid #44475a;
         }
-        ul {
-            list-style-type: square;
-            padding-left: 20px;
+        th, td {
+            text-align: center;
+            padding: 8px;
+        }
+        th {
+            background-color: #6272a4;
+        }
+        td {
+            background-color: #44475a;
         }
         img {
+            display: block;
+            margin: 10px auto;
             border-radius: 50%;
-            margin-top: 10px;
-        }
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #004d99;
-            color: white;
-            position: relative;
-            bottom: 0;
-            width: 100%;
         }
         a {
-            color: #004d99;
+            color: #8be9fd;
             text-decoration: none;
         }
         a:hover {
             text-decoration: underline;
+            color: #50fa7b;
+        }
+        .skills {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            margin-top: 15px;
+        }
+        .skills div {
+            padding: 10px;
+            background-color: #44475a;
+            border-radius: 5px;
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Welcome to Mark Revin's World</h1>
-    <p>Exploring creativity, passion, and innovation.</p>
+    <h1>About Me</h1>
+    <p>Welcome to my digital portfolio! I'm Mark Revin O. Barbon, a tech enthusiast exploring the future of IT.</p>
 </header>
 
-<section>
-    <h2>About Me</h2>
-    <p>Hello! I’m Mark Revin O. Barbon. I love learning, exploring, and creating. Welcome to my portfolio!</p>
-</section>
-
-<section>
+<div class="container">
     <h2>Education & Achievements</h2>
     <ul>
         <li>College Undergraduate</li>
-        <li>Senior High School Graduate with Honors</li>
+        <li>With Honor in Senior High School</li>
     </ul>
-</section>
 
-<section>
-    <h2>Current Course</h2>
-    <p>Pursuing a degree in Information Technology with a specialization in Mobile and Internet Technologies.</p>
-</section>
+    <h2>Course</h2>
+    <p>Currently pursuing a degree in Information Technology specializing in Mobile and Internet Technologies.</p>
 
-<section>
     <h2>IT Experience</h2>
-    <table>
-        <tr>
-            <th>Coding</th>
-            <th>Figma</th>
-            <th>Android Studio</th>
-        </tr>
-        <tr>
-            <td>Proficient</td>
-            <td>Intermediate</td>
-            <td>Beginner</td>
-        </tr>
-    </table>
-</section>
+    <div class="skills">
+        <div><strong>Coding</strong></div>
+        <div><strong>Figma</strong></div>
+        <div><strong>Android Studio</strong></div>
+    </div>
 
-<section>
     <h2>Hobbies & Interests</h2>
     <ul>
         <li>Gaming</li>
-        <li>Creating content for online platforms</li>
-        <li>Playing basketball</li>
+        <li>Content Creation</li>
+        <li>Basketball</li>
     </ul>
-</section>
 
-<section>
-    <h2>Life Goals</h2>
-    <p>My dream is to create innovative solutions that make technology accessible to all. I aim to launch a startup that uses AI to revolutionize education worldwide.</p>
-</section>
+    <h2>Goals & Dreams</h2>
+    <p>
+        My ultimate goal is to create innovative solutions that make technology accessible for everyone.
+        I aspire to start a company that bridges gaps in education using AI-driven tools.
+    </p>
 
-<section>
     <h2>Picture Gallery</h2>
-    <img src="https://media.discordapp.net/attachments/1311356982304837694/1311357056288030831/me.jpg" alt="Mark Revin" width="150" height="150">
-</section>
+    <img src="https://media.discordapp.net/attachments/1311356982304837694/1311357056288030831/me.jpg?ex=67488fee&is=67473e6e&hm=cf5b51fbc48bd65157024817ad1a2ec105b447a1faf25ca9611909255028611b&=&format=webp&width=279&height=419" alt="Mark Revin O. Barbon" width="150" height="150">
 
-<section>
     <h2>Useful Links</h2>
     <ul>
-        <li><a href="https://www.w3schools.com/html/">Learn HTML</a></li>
-        <li><a href="https://github.com/">GitHub</a></li>
-        <li><a href="https://stackoverflow.com/">Stack Overflow</a></li>
+        <li><a href="https://www.w3schools.com/html/" target="_blank">Learn HTML</a></li>
+        <li><a href="https://www.github.com/" target="_blank">GitHub</a></li>
+        <li><a href="https://www.stackoverflow.com/" target="_blank">Stack Overflow</a></li>
     </ul>
-</section>
-
-<footer>
-    <p>&copy; 2024 Mark Revin O. Barbon. All rights reserved.</p>
-</footer>
+</div>
 
 </body>
 </html>
