@@ -10,7 +10,7 @@
             margin: 0;
             padding: 0;
             background-color: #f4ede4; 
-            color: #4a2c2a;
+            color: #4a2c2a; 
         }
 
         header {
@@ -40,6 +40,7 @@
 
         nav a:hover {
             background-color: #c5a889; 
+        }
 
         main {
             max-width: 900px;
@@ -50,32 +51,40 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        h2 {
+        .section-box {
+            background-color: #e8d4b8; 
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-box h2 {
             color: #8b5e3c; 
         }
 
-        ul {
+        .section-box ul {
             list-style-type: disc;
             margin-left: 20px;
         }
 
-        table {
+        .section-box table {
             width: 100%;
             border-collapse: collapse;
             margin: 20px 0;
         }
 
-        table th, table td {
+        .section-box table th, .section-box table td {
             border: 1px solid #d9c2a9; 
             padding: 10px;
             text-align: center;
             background-color: #f4ede4; 
         }
 
-        img {
+        .section-box img {
             max-width: 100%;
             border-radius: 8px;
-            border: 2px solid #d9c2a9;
+            border: 2px solid #d9c2a9; 
         }
 
         footer {
@@ -92,6 +101,7 @@
     </header>
 
     <nav>
+        <a href="#about">About Me</a>
         <a href="#education">Education & Achievements</a>
         <a href="#course">Course</a>
         <a href="#experience">IT Experience</a>
@@ -101,25 +111,25 @@
     </nav>
 
     <main>
-        <section id="about">
+        <div class="section-box" id="about">
             <h2>About Me</h2>
             <p>Hello! I am Mark Revin O. Barbon. I am passionate about learning and always eager to explore new opportunities in life.</p>
-        </section>
+        </div>
 
-        <section id="education">
+        <div class="section-box" id="education">
             <h2>Education & Achievements</h2>
             <ul>
                 <li>College Undergrad</li>
                 <li>With Honor in Senior High School</li>
             </ul>
-        </section>
+        </div>
 
-        <section id="course">
+        <div class="section-box" id="course">
             <h2>Course</h2>
             <p>Currently pursuing Information Technology Specialized in Mobile Internet.</p>
-        </section>
+        </div>
 
-        <section id="experience">
+        <div class="section-box" id="experience">
             <h2>IT Experience</h2>
             <table>
                 <tr>
@@ -128,26 +138,26 @@
                     <th>Android Studio</th>
                 </tr>
             </table>
-        </section>
+        </div>
 
-        <section id="hobbies">
+        <div class="section-box" id="hobbies">
             <h2>Hobbies & Interests</h2>
             <ul>
                 <li>Gaming</li>
                 <li>Content Creator</li>
                 <li>Basketball</li>
             </ul>
-        </section>
+        </div>
 
-        <section id="goals">
+        <div class="section-box" id="goals">
             <h2>Goals & Dreams</h2>
             <p>My ultimate goal is to innovate solutions that make technology more accessible and impactful. I dream of creating a startup that bridges gaps in education using AI.</p>
-        </section>
+        </div>
 
-        <section id="gallery">
+        <div class="section-box" id="gallery">
             <h2>Picture Gallery</h2>
             <img src="https://media.discordapp.net/attachments/1311356982304837694/1311357056288030831/me.jpg?ex=67488fee&is=67473e6e&hm=cf5b51fbc48bd65157024817ad1a2ec105b447a1faf25ca9611909255028611b&=&format=webp&width=279&height=419" alt="A person holding a camera">
-        </section>
+        </div>
     </main>
 
     <footer>
