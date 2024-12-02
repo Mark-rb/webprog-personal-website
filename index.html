@@ -3,93 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Profile Web Page</title>
+    <title>Personal Profile</title>
     <style>
-  
-        * {
+        body {
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+            background-color: #f0f8ff;
+            color: #333;
         }
 
-        body {
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(to bottom right, #6a11cb, #2575fc);
-            color: #fff;
-            min-height: 100vh;
-            padding: 20px;
-        }
-
-        h1 {
-            text-align: center;
-            margin: 20px 0;
-            font-size: 2.5rem;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-        }
-
-        .menu {
+        header {
             background-color: #007bff;
-            border-radius: 10px;
+            color: white;
             padding: 20px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 15px;
-            margin-bottom: 30px;
-        }
-
-        .menu-item {
-            background-color: #f4f4f9;
-            color: #333;
-            border-radius: 5px;
-            padding: 15px;
             text-align: center;
-            font-size: 1rem;
-            font-weight: bold;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
         }
 
-        .menu-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-        }
-
-        .content-section {
-            margin-top: 20px;
+        main {
             padding: 20px;
-            background: #fff;
-            color: #333;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        h2 {
-            margin-bottom: 10px;
+        h1, h2 {
             color: #007bff;
         }
 
-        ul {
+        ul, table {
             margin: 10px 0;
-            padding-left: 20px;
-        }
-
-        ul li {
-            margin: 5px 0;
+            padding: 0;
+            list-style-type: none;
         }
 
         table {
             width: 100%;
-            margin-top: 10px;
             border-collapse: collapse;
-        }
-
-        table, th, td {
-            border: 1px solid #ddd;
+            margin-top: 10px;
         }
 
         th, td {
+            border: 1px solid #ddd;
             padding: 10px;
             text-align: center;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
         }
 
         a {
@@ -103,39 +79,24 @@
     </style>
 </head>
 <body>
-    <h1>Personal Profile Web Page</h1>
+    <header>
+        <h1>Mark Revin O. Barbon</h1>
+        <p>Welcome to my personal profile webpage!</p>
+    </header>
 
-    <!-- Menu -->
-    <div class="menu">
-        <div class="menu-item">1 About Me</div>
-        <div class="menu-item">2 Education / Achievements</div>
-        <div class="menu-item">3 Course</div>
-        <div class="menu-item">4 IT Experience</div>
-        <div class="menu-item">5 Hobbies & Interests</div>
-        <div class="menu-item">6 Goals In Life / Dream</div>
-        <div class="menu-item">7 Picture Gallery</div>
-    </div>
-
-    <!-- Content Sections -->
-    <div class="content-section">
+    <main>
         <h2>About Me</h2>
-        <p>Hello! I am Mark Revin O. Barbon, passionate about learning and always eager to explore new opportunities in life. Welcome to my page!</p>
-    </div>
+        <p>Hello! I am passionate about learning and always eager to explore new opportunities in life.</p>
 
-    <div class="content-section">
         <h2>Education / Achievements</h2>
         <ul>
             <li>College Undergrad</li>
             <li>With Honor in Senior High School</li>
         </ul>
-    </div>
 
-    <div class="content-section">
         <h2>Course</h2>
         <p>Currently pursuing Information Technology Specialized in Mobile Internet.</p>
-    </div>
 
-    <div class="content-section">
         <h2>IT Experience</h2>
         <table>
             <tr>
@@ -144,34 +105,30 @@
                 <th>Android Studio</th>
             </tr>
         </table>
-    </div>
 
-    <div class="content-section">
         <h2>Hobbies & Interests</h2>
         <ul>
             <li>Gaming</li>
             <li>Content Creator</li>
             <li>Basketball</li>
         </ul>
-    </div>
 
-    <div class="content-section">
         <h2>Goals in Life / Dream</h2>
         <p>My ultimate goal is to innovate solutions that make technology more accessible and impactful. I dream of creating a startup that bridges gaps in education using AI.</p>
-    </div>
 
-    <div class="content-section">
         <h2>Picture Gallery</h2>
         <img src="https://media.discordapp.net/attachments/1311356982304837694/1311357056288030831/me.jpg?ex=67488fee&is=67473e6e&hm=cf5b51fbc48bd65157024817ad1a2ec105b447a1faf25ca9611909255028611b&=&format=webp&width=279&height=419" alt="A person holding a camera">
-    </div>
 
-    <div class="content-section">
         <h2>Useful Links</h2>
         <ul>
             <li><a href="https://www.w3schools.com/html/">Learn HTML</a></li>
             <li><a href="https://www.github.com/">GitHub</a></li>
             <li><a href="https://www.stackoverflow.com/">Stack Overflow</a></li>
         </ul>
-    </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Mark Revin O. Barbon</p>
+    </footer>
 </body>
 </html>
