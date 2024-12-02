@@ -1,21 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" href="css/flexbox.css?version=0.2">
-    <title>My Personal Profile</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Profile Web Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .menu {
+            background-color: #007bff;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .menu-item {
+            background-color: #f4f4f9;
+            border-radius: 5px;
+            padding: 20px;
+            width: 150px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .menu-item:hover {
+            background-color: #e9ecef;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-
-<h1>Personal Profile Web page </h1>
-
-<div class="flex-container">
-    <div>1 About Me</div>
-    <div>2 Education / Achievements</div>
-    <div>3 Course  </div>  
-    <div>4 IT Experience</div>
-    <div>5 Hobbies & Interests</div>
-    <div>6 Goals In Life / Dream</div>  
-    <div>7 Picture Gallery</div>
-  </div>  
+    <h1>Personal Profile Web Page</h1>
+    <div class="menu">
+        <div class="menu-item">1 About Me</div>
+        <div class="menu-item">2 Education / Achievements</div>
+        <div class="menu-item">3 Course</div>
+        <div class="menu-item">4 IT Experience</div>
+        <div class="menu-item">5 Hobbies & Interests</div>
+        <div class="menu-item">6 Goals In Life / Dream</div>
+        <div class="menu-item">7 Picture Gallery</div>
+    </div>
 </body>
 </html>
