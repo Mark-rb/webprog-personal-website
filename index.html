@@ -5,39 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Profile Web Page</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom right, #6a11cb, #2575fc);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         h1 {
-            text-align: center;
-            margin-top: 20px;
+            margin: 30px 0;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
         }
 
         .menu {
-            background-color: #007bff;
-            padding: 20px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            width: 90%;
+            max-width: 1000px;
         }
 
         .menu-item {
-            background-color: #f4f4f9;
-            border-radius: 5px;
+            background: #fff;
+            color: #333;
+            border-radius: 10px;
             padding: 20px;
-            width: 150px;
             text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         .menu-item:hover {
-            background-color: #e9ecef;
-            cursor: pointer;
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+        }
+
+        .menu-item:active {
+            transform: translateY(0);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            margin-top: 30px;
+            padding: 20px;
+            font-size: 0.9rem;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            width: 90%;
+            text-align: center;
+            color: #ddd;
         }
     </style>
 </head>
@@ -52,5 +81,9 @@
         <div class="menu-item">6 Goals In Life / Dream</div>
         <div class="menu-item">7 Picture Gallery</div>
     </div>
+    <footer>
+        &copy; 2024 Mark Revin O. Barbon | Designed with ❤️ by Mark
+    </footer>
 </body>
 </html>
+
