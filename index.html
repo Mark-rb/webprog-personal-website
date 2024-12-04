@@ -1,91 +1,113 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: lavender;
-  }
+    <title>About Me</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: lavender;
+        }
 
-  h1 {
-    text-align: center;
-    background-color: white;
-    margin: 0;
-    padding: 20px;
-    font-size: 24px;
-  }
+        h1 {
+            text-align: center;
+            background-color: white;
+            margin: 0;
+            padding: 20px;
+            font-size: 24px;
+        }
 
-  .flex-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 20px;
-    background-color: #dda0dd;
-  }
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px;
+            gap: 10px;
+            background-color: #dda0dd;
+            padding: 20px;
+        }
 
-  .flex-item {
-    background-color: white;
-    border: 2px solid #dda0dd;
-    margin: 10px;
-    padding: 20px;
-    width: 200px;
-    text-align: center;
-  }
+        .flex-item {
+            background-color: white;
+            border: 2px solid #dda0dd;
+            margin: 10px;
+            padding: 20px;
+            flex: 1 1 calc(30% - 20px); 
+            box-sizing: border-box;
+            text-align: center;
+        }
 
-  .flex-item img {
-    max-width: 100%;
-    height: auto;
-  }
+        .flex-item img {
+            max-width: 100%;
+            height: auto;
+        }
 
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: left;
+        }
 
-  ul li {
-    text-align: left;
-  }
-</style>
+        ul li {
+            margin: 5px 0;
+        }
+
+        table {
+            margin: 0 auto;
+        }
+    </style>
 </head>
 <body>
-  <h1>Personal Profile Web Page</h1>
-  <div class="flex-container">
-    <div class="flex-item">
-      <h3>About Me</h3>
-      <p>Hello! I am Mark Revin O. Barbon, passionate about learning and exploring new opportunities.</p>
+    <h1>About Me</h1>
+    <div class="flex-container">
+        <div class="flex-item">
+            <h2>About Me</h2>
+            <p>Hello! I am Mark Revin O. Barbon passionate about learning and always eager to explore new opportunities in life. Welcome to my page!</p>
+        </div>
+        <div class="flex-item">
+            <h2>Education / Achievements</h2>
+            <ul>
+                <li>College Undergrad</li>
+                <li>With Honor in Senior High School</li>
+            </ul>
+        </div>
+        <div class="flex-item">
+            <h2>Course</h2>
+            <p>Currently pursuing Information Technology Specialized in Mobile Internet.</p>
+        </div>
+        <div class="flex-item">
+            <h2>IT Experience</h2>
+            <table border="1">
+                <tr>
+                    <th>Coding</th>
+                    <th>Figma</th>
+                    <th>Android Studio</th>
+                </tr>
+            </table>
+        </div>
+        <div class="flex-item">
+            <h2>Hobbies & Interests</h2>
+            <ul>
+                <li>Gaming</li>
+                <li>Content Creator</li>
+                <li>Basketball</li>
+            </ul>
+        </div>
+        <div class="flex-item">
+            <h2>Goals in Life / Dream</h2>
+            <p>My ultimate goal is to innovate solutions that make technology more accessible and impactful. I dream of creating a startup that bridges gaps in education using AI.</p>
+        </div>
+        <div class="flex-item">
+            <h2>Picture Gallery</h2>
+            <img src="https://media.discordapp.net/attachments/1311356982304837694/1311357056288030831/me.jpg?ex=67488fee&is=67473e6e&hm=cf5b51fbc48bd65157024817ad1a2ec105b447a1faf25ca9611909255028611b&=&format=webp&width=279&height=419" alt="A person holding a camera">
+        </div>
     </div>
-    <div class="flex-item">
-      <h3>Education / Achievements</h3>
-      <p>Studies at Asia Pacific College</p>
-    </div>
-    <div class="flex-item">
-      <h3>Course</h3>
-      <p>BSIT-MI</p>
-    </div>
-    <div class="flex-item">
-      <h3>IT Experience</h3>
-      <ul>
-        <li>Creating an app using Android Studio</li>
-      </ul>
-    </div>
-    <div class="flex-item">
-      <h3>Hobbies & Interests</h3>
-      <ul>
-        <li>Watch movies and series</li>
-        <li>Collect figurines</li>
-        <li>Play games</li>
-      </ul>
-    </div>
-    <div class="flex-item">
-      <h3>Goals In Life / Dream</h3>
-      <p>To graduate college and make an impact in the tech world.</p>
-    </div>
-    <div class="flex-item">
-      <h3>Picture Gallery</h3>
-      <img src="https://media.discordapp.net/attachments/1311356982304837694/1311357056288030831/me.jpg?ex=67488fee&is=67473e6e&hm=cf5b51fbc48bd65157024817ad1a2ec105b447a1faf25ca9611909255028611b&=&format=webp&width=279&height=419" alt="Gallery Image">
-    </div>
-  </div>
+    <h2 style="text-align: center;">Useful Links</h2>
+    <ul style="text-align: center;">
+        <li><a href="https://www.w3schools.com/html/">Learn HTML</a></li>
+        <li><a href="https://www.github.com/">GitHub</a></li>
+        <li><a href="https://www.stackoverflow.com/">Stack Overflow</a></li>
+    </ul>
 </body>
 </html>
