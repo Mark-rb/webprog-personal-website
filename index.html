@@ -1,137 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Profile</title>
+    <title>About Me</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4ede4; 
-            color: #4a2c2a; 
+            background-color: lavender;
         }
 
-        header {
+        h1 {
             text-align: center;
+            background-color: white;
+            margin: 0;
             padding: 20px;
-            background-color: #8b5e3c; 
-            color: white;
+            font-size: 24px;
         }
 
-        nav {
+        .flex-container {
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
-            background-color: #a67c52; 
-            padding: 10px 0;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: white;
-            background-color: #d9c2a9; 
-            margin: 0 10px;
-            padding: 10px 20px;
-            border-radius: 8px;
-            font-weight: bold;
-            transition: background-color 0.3s;
-        }
-
-        nav a:hover {
-            background-color: #c5a889; 
-        }
-
-        main {
-            max-width: 900px;
-            margin: 20px auto;
+            margin: 20px;
+            gap: 10px;
+            background-color: #dda0dd;
             padding: 20px;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        .section-box {
-            background-color: #e8d4b8; 
+        .flex-item {
+            background-color: white;
+            border: 2px solid #dda0dd;
+            margin: 10px;
             padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        .section-box h2 {
-            color: #8b5e3c; 
-        }
-
-        .section-box ul {
-            list-style-type: disc;
-            margin-left: 20px;
-        }
-
-        .section-box table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-
-        .section-box table th, .section-box table td {
-            border: 1px solid #d9c2a9; 
-            padding: 10px;
+            flex: 1 1 calc(30% - 20px); /* Responsive sizing */
+            box-sizing: border-box;
             text-align: center;
-            background-color: #f4ede4; 
         }
 
-        .section-box img {
+        .flex-item img {
             max-width: 100%;
-            border-radius: 8px;
-            border: 2px solid #d9c2a9; 
+            height: auto;
         }
 
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #8b5e3c; 
-            color: white;
+        ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: left;
+        }
+
+        ul li {
+            margin: 5px 0;
+        }
+
+        table {
+            margin: 0 auto;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Personal Profile</h1>
-    </header>
-
-    <nav>
-        <a href="#about">About Me</a>
-        <a href="#education">Education & Achievements</a>
-        <a href="#course">Course</a>
-        <a href="#experience">IT Experience</a>
-        <a href="#hobbies">Hobbies & Interests</a>
-        <a href="#goals">Goals & Dreams</a>
-        <a href="#gallery">Picture Gallery</a>
-    </nav>
-
-    <main>
-        <div class="section-box" id="about">
+    <h1>About Me</h1>
+    <div class="flex-container">
+        <div class="flex-item">
             <h2>About Me</h2>
-            <p>Hello! I am Mark Revin O. Barbon. I am passionate about learning and always eager to explore new opportunities in life.</p>
+            <p>Hello! I am Mark Revin O. Barbon passionate about learning and always eager to explore new opportunities in life. Welcome to my page!</p>
         </div>
-
-        <div class="section-box" id="education">
-            <h2>Education & Achievements</h2>
+        <div class="flex-item">
+            <h2>Education / Achievements</h2>
             <ul>
                 <li>College Undergrad</li>
                 <li>With Honor in Senior High School</li>
             </ul>
         </div>
-
-        <div class="section-box" id="course">
+        <div class="flex-item">
             <h2>Course</h2>
             <p>Currently pursuing Information Technology Specialized in Mobile Internet.</p>
         </div>
-
-        <div class="section-box" id="experience">
+        <div class="flex-item">
             <h2>IT Experience</h2>
-            <table>
+            <table border="1">
                 <tr>
                     <th>Coding</th>
                     <th>Figma</th>
@@ -139,8 +86,7 @@
                 </tr>
             </table>
         </div>
-
-        <div class="section-box" id="hobbies">
+        <div class="flex-item">
             <h2>Hobbies & Interests</h2>
             <ul>
                 <li>Gaming</li>
@@ -148,20 +94,21 @@
                 <li>Basketball</li>
             </ul>
         </div>
-
-        <div class="section-box" id="goals">
-            <h2>Goals & Dreams</h2>
+        <div class="flex-item">
+            <h2>Goals in Life / Dream</h2>
             <p>My ultimate goal is to innovate solutions that make technology more accessible and impactful. I dream of creating a startup that bridges gaps in education using AI.</p>
         </div>
-
-        <div class="section-box" id="gallery">
+        <div class="flex-item">
             <h2>Picture Gallery</h2>
             <img src="https://media.discordapp.net/attachments/1311356982304837694/1311357056288030831/me.jpg?ex=67488fee&is=67473e6e&hm=cf5b51fbc48bd65157024817ad1a2ec105b447a1faf25ca9611909255028611b&=&format=webp&width=279&height=419" alt="A person holding a camera">
         </div>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Mark Revin O. Barbon</p>
-    </footer>
+    </div>
+    <h2 style="text-align: center;">Useful Links</h2>
+    <ul style="text-align: center;">
+        <li><a href="https://www.w3schools.com/html/">Learn HTML</a></li>
+        <li><a href="https://www.github.com/">GitHub</a></li>
+        <li><a href="https://www.stackoverflow.com/">Stack Overflow</a></li>
+    </ul>
 </body>
 </html>
+
