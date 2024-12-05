@@ -1,6 +1,60 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: grid;
+            grid-template-areas:
+                "header header"
+                "main sidebar"
+                "footer footer";
+            grid-template-columns: 3fr 1fr;
+            grid-template-rows: auto 1fr auto;
+            gap: 10px;
+            padding: 10px;
+        }
+
+        header {
+            grid-area: header;
+            background: #f4f4f4;
+            padding: 10px;
+            text-align: center;
+        }
+
+        main {
+            grid-area: main;
+            background: #fff;
+            padding: 10px;
+        }
+
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        aside.sidebar {
+            grid-area: sidebar;
+            background: #eaeaea;
+            padding: 10px;
+        }
+
+        footer {
+            grid-area: footer;
+            background: #f4f4f4;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
 
@@ -22,6 +76,7 @@
         <th>Coding</th>
         <th>Figma</th>
         <th>Android Studio</th>
+    </tr>
 </table>
 
 <h2>Hobbies & Interests</h2>
@@ -38,6 +93,7 @@
 <table>
     <tr>
         <td><img src="https://media.discordapp.net/attachments/1311356982304837694/1311357056288030831/me.jpg?ex=67488fee&is=67473e6e&hm=cf5b51fbc48bd65157024817ad1a2ec105b447a1faf25ca9611909255028611b&=&format=webp&width=279&height=419" alt="A person holding a camera" width="150" height="150"></td>
+    </tr>
 </table>
 
 <h2>Useful Links</h2>
@@ -46,6 +102,25 @@
     <li><a href="https://www.github.com/">GitHub</a></li>
     <li><a href="https://www.stackoverflow.com/">Stack Overflow</a></li>
 </ul>
+
+<div class="container">
+    <header>
+        <h1>Welcome to My Layout</h1>
+    </header>
+    <main>
+        <section class="main-content">
+            <p>This is the main content area. It uses flexbox for better alignment of its items.</p>
+            <p>Enjoy exploring!</p>
+        </section>
+        <aside class="sidebar">
+            <h2>Sidebar</h2>
+            <p>Links, ads, or additional info goes here.</p>
+        </aside>
+    </main>
+    <footer>
+        <p>&copy; 2024 Mark Revin Barbon</p>
+    </footer>
+</div>
 
 </body>
 </html>
