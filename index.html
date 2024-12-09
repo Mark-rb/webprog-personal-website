@@ -3,172 +3,159 @@
 <head>
     <title>About Me</title>
     <style>
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        .grid-container {
-            display: grid;
-            grid-template-areas:
-                "header header"
-                "main sidebar"
-                "footer footer";
-            gap: 20px;
-            padding: 20px;
-            background-color: #f0f8ff;
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background: #f4f4f4;
+            color: #333;
+            padding: 10px;
         }
 
-        .header {
-            grid-area: header;
-            background-color: #004080;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 80px;
-            border-radius: 5px;
+        h1, h2 {
+            color: #555;
         }
 
-        .main {
-            grid-area: main;
+        .container {
             display: flex;
             flex-direction: column;
             gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
             padding: 10px;
-            background-color: #ffffff;
-            border-radius: 8px;
         }
 
-        .sidebar {
-            grid-area: sidebar;
-            background-color: #ffffff;
-            border-radius: 8px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+        }
+
+        th, td {
+            border: 1px solid #555;
             padding: 10px;
-            gap: 10px;
+            text-align: center;
         }
 
-        .footer {
-            grid-area: footer;
-            background-color: #004080;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 60px;
-            border-radius: 5px;
-        }
-
-        .education-course {
+        .gallery {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             gap: 10px;
-            padding: 10px;
-            background-color: #e6e6e6;
-            border-radius: 5px;
+            margin: 20px 0;
         }
 
         .gallery img {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 8px;
-            max-width: 100%;
+            width: 100%;
             height: auto;
+            border-radius: 8px;
+        }
+
+        .links a {
+            color: #555;
+            text-decoration: none;
             margin: 5px;
+            transition: color 0.3s ease;
+        }
+
+        .links a:hover {
+            color: #007BFF;
+        }
+
+        section {
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
         }
 
         @media (max-width: 768px) {
-            .grid-container {
-                grid-template-areas:
-                    "header"
-                    "main"
-                    "sidebar"
-                    "footer";
-                gap: 10px;
+            .container {
+                padding: 5px;
             }
 
-            .education-course {
-                grid-template-columns: 1fr;
+            .gallery {
+                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
             }
 
-            .footer {
-                height: auto;
-                padding: 10px;
+            table th, td {
+                padding: 5px;
             }
         }
     </style>
 </head>
 <body>
+    <div class="container">
 
-<div class="grid-container">
+        <section>
+            <h1>About Me</h1>
+            <p>Hello! I am Mark Revin O. Barbon, passionate about learning and always eager to explore new opportunities in life. Welcome to my page!</p>
+        </section>
 
-    <div class="header">
-        <h1>About Me</h1>
-    </div>
-
-    <div class="main">
-        <h2>Introduction</h2>
-        <p>Hello! I am Mark Revin O. Barbon, passionate about learning and always eager to explore new opportunities in life. Welcome to my page!</p>
-
-        <div class="education-course">
-            <div>
-                <h2>Education / Achievements</h2>
-                <ul>
-                    <li>College Undergrad</li>
-                    <li>With Honor in Senior High School</li>
-                </ul>
-            </div>
-            <div>
-                <h2>Course</h2>
-                <p>Currently pursuing Information Technology Specialized in Mobile Internet.</p>
-            </div>
-        </div>
-
-        <h2>IT Experience</h2>
-        <table border="1" style="width:100%; border-collapse: collapse;">
-            <tr>
-                <th>Coding</th>
-                <th>Figma</th>
-                <th>Android Studio</th>
-            </tr>
-            <tr>
-                <td>Intermediate</td>
-                <td>Beginner</td>
-                <td>Beginner</td>
-            </tr>
-        </table>
-    </div>
-
-    <div class="sidebar">
-        <h2>Hobbies & Interests</h2>
-        <ul>
-            <li>Gaming</li>
-            <li>Content Creator</li>
-            <li>Basketball</li>
-        </ul>
-
-        <h2>Picture Gallery</h2>
-        <div class="gallery">
-            <img src="https://media.discordapp.net/attachments/1311356982304837694/1311357056288030831/me.jpg?ex=67488fee&is=67473e6e&hm=cf5b51fbc48bd65157024817ad1a2ec105b447a1faf25ca9611909255028611b&=&format=webp&width=279&height=419" alt="A person holding a camera" width="100">
-        </div>
-    </div>
-
-    <div class="footer">
-        <div>
-            <h2>Goals & Useful Links</h2>
+        <section>
+            <h2>Education / Achievements</h2>
             <ul>
-                <li><a href="https://www.w3schools.com/html/" style="color: white;">Learn HTML</a></li>
-                <li><a href="https://www.github.com/" style="color: white;">GitHub</a></li>
-                <li><a href="https://www.stackoverflow.com/" style="color: white;">Stack Overflow</a></li>
+                <li>College Undergrad</li>
+                <li>With Honor in Senior High School</li>
             </ul>
-        </div>
-    </div>
-</div>
+        </section>
 
+        <section>
+            <h2>Course</h2>
+            <p>Currently pursuing Information Technology Specialized in Mobile Internet.</p>
+        </section>
+
+        <section>
+            <h2>IT Experience</h2>
+            <table>
+                <tr>
+                    <th>Coding</th>
+                    <th>Figma</th>
+                    <th>Android Studio</th>
+                </tr>
+                <tr>
+                    <td>Intermediate</td>
+                    <td>Intermediate</td>
+                    <td>Beginner</td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>Hobbies & Interests</h2>
+            <ul>
+                <li>Gaming</li>
+                <li>Content Creator</li>
+                <li>Basketball</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Goals in Life / Dream</h2>
+            <p>My ultimate goal is to innovate solutions that make technology more accessible and impactful. I dream of creating a startup that bridges gaps in education using AI.</p>
+        </section>
+
+        <section>
+            <h2>Picture Gallery</h2>
+            <div class="gallery">
+                <img src="https://media.discordapp.net/attachments/1311356982304837694/1311357056288030831/me.jpg?ex=67488fee&is=67473e6e&hm=cf5b51fbc48bd65157024817ad1a2ec105b447a1faf25ca9611909255028611b&=&format=webp&width=279&height=419" alt="A person holding a camera">
+            </div>
+        </section>
+
+        <section>
+            <h2>Useful Links</h2>
+            <div class="links">
+                <a href="https://www.w3schools.com/html/">Learn HTML</a> |
+                <a href="https://www.github.com/">GitHub</a> |
+                <a href="https://www.stackoverflow.com/">Stack Overflow</a>
+            </div>
+        </section>
+
+    </div>
 </body>
 </html>
