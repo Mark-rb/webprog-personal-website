@@ -3,129 +3,102 @@
 <head>
     <title>About Me</title>
     <style>
-        .item1 { grid-area: header; }
-        .item2 { grid-area: menu; }
-        .item3 { grid-area: main; }
-        .item4 { grid-area: right; }
-        .item5 { grid-area: footer; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
         .grid-container {
             display: grid;
             grid-template-areas:
-                'header header header header header header'
-                'menu main main main right right'
-                'menu footer footer footer footer footer';
-            gap: 10px;
-            background-color: #2196F3;
-            padding: 10px;
-        }
-
-        .grid-container > div {
-            background-color: rgba(255, 255, 255, 0.8);
-            text-align: center;
+                "header header"
+                "main sidebar"
+                "footer footer";
+            gap: 20px;
             padding: 20px;
-            font-size: 16px;
+            background-color: #f0f8ff;
         }
 
-        .item1 {
+        .header {
+            grid-area: header;
+            background-color: #004080;
+            color: white;
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #ffffff;
+            height: 80px;
             border-radius: 5px;
         }
 
-        .item2 {
+        .main {
+            grid-area: main;
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
-            gap: 8px;
+            gap: 20px;
             padding: 10px;
+            background-color: #ffffff;
+            border-radius: 8px;
         }
 
-        .item3 {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            gap: 10px;
-            padding: 10px;
-            text-align: left;
-        }
-
-        .item4 {
+        .sidebar {
+            grid-area: sidebar;
+            background-color: #ffffff;
+            border-radius: 8px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 10px;
             padding: 10px;
-            text-align: center;
+            gap: 10px;
         }
 
-        .item5 {
+        .footer {
+            grid-area: footer;
+            background-color: #004080;
+            color: white;
             display: flex;
-            flex-direction: column;
-            align-items: center;
             justify-content: center;
-            gap: 8px;
+            align-items: center;
+            height: 60px;
+            border-radius: 5px;
+        }
+
+        .education-course {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
             padding: 10px;
+            background-color: #e6e6e6;
+            border-radius: 5px;
         }
 
-        ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        li {
-            padding: 5px;
-        }
-
-        table {
-            margin: 10px auto;
-            border-collapse: collapse;
-        }
-
-        th,
-        td {
-            padding: 8px;
-            border: 1px solid #555;
+        .gallery img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 8px;
+            max-width: 100%;
+            height: auto;
+            margin: 5px;
         }
 
         @media (max-width: 768px) {
             .grid-container {
                 grid-template-areas:
-                    'header header header header header header'
-                    'menu menu'
-                    'main main'
-                    'right right'
-                    'footer footer';
-                gap: 8px;
+                    "header"
+                    "main"
+                    "sidebar"
+                    "footer";
+                gap: 10px;
             }
 
-            .item3,
-            .item4,
-            .item2,
-            .item5 {
+            .education-course {
+                grid-template-columns: 1fr;
+            }
+
+            .footer {
+                height: auto;
                 padding: 10px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .grid-container {
-                grid-template-areas:
-                    'header'
-                    'menu'
-                    'main'
-                    'right'
-                    'footer';
-            }
-
-            .item1,
-            .item2,
-            .item3,
-            .item4,
-            .item5 {
-                padding: 5px;
             }
         }
     </style>
@@ -133,37 +106,31 @@
 <body>
 
 <div class="grid-container">
- 
-    <div class="item1">
+
+    <div class="header">
         <h1>About Me</h1>
     </div>
 
-    <div class="item2">
-        <h2>Menu</h2>
-        <ul>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#course">Course</a></li>
-            <li><a href="#hobbies">Hobbies</a></li>
-            <li><a href="#goals">Goals</a></li>
-        </ul>
-    </div>
-
-
-    <div class="item3">
+    <div class="main">
         <h2>Introduction</h2>
         <p>Hello! I am Mark Revin O. Barbon, passionate about learning and always eager to explore new opportunities in life. Welcome to my page!</p>
 
-        <h2 id="education">Education / Achievements</h2>
-        <ul>
-            <li>College Undergrad</li>
-            <li>With Honor in Senior High School</li>
-        </ul>
-
-        <h2 id="course">Course</h2>
-        <p>Currently pursuing Information Technology specialized in Mobile Internet.</p>
+        <div class="education-course">
+            <div>
+                <h2>Education / Achievements</h2>
+                <ul>
+                    <li>College Undergrad</li>
+                    <li>With Honor in Senior High School</li>
+                </ul>
+            </div>
+            <div>
+                <h2>Course</h2>
+                <p>Currently pursuing Information Technology Specialized in Mobile Internet.</p>
+            </div>
+        </div>
 
         <h2>IT Experience</h2>
-        <table>
+        <table border="1" style="width:100%; border-collapse: collapse;">
             <tr>
                 <th>Coding</th>
                 <th>Figma</th>
@@ -177,26 +144,29 @@
         </table>
     </div>
 
-    <div class="item4">
-        <h2 id="hobbies">Hobbies & Interests</h2>
+    <div class="sidebar">
+        <h2>Hobbies & Interests</h2>
         <ul>
             <li>Gaming</li>
             <li>Content Creator</li>
             <li>Basketball</li>
         </ul>
+
         <h2>Picture Gallery</h2>
-        <img src="https://via.placeholder.com/150" alt="A placeholder image" width="150" height="150">
+        <div class="gallery">
+            <img src="https://media.discordapp.net/attachments/1311356982304837694/1311357056288030831/me.jpg?ex=67488fee&is=67473e6e&hm=cf5b51fbc48bd65157024817ad1a2ec105b447a1faf25ca9611909255028611b&=&format=webp&width=279&height=419" alt="A person holding a camera" width="100">
+        </div>
     </div>
 
-    <div class="item5">
-        <h2 id="goals">Goals in Life / Dream</h2>
-        <p>My ultimate goal is to innovate solutions that make technology more accessible and impactful. I dream of creating a startup that bridges gaps in education using AI.</p>
-        <h2>Useful Links</h2>
-        <ul>
-            <li><a href="https://www.w3schools.com/html/">Learn HTML</a></li>
-            <li><a href="https://www.github.com/">GitHub</a></li>
-            <li><a href="https://www.stackoverflow.com/">Stack Overflow</a></li>
-        </ul>
+    <div class="footer">
+        <div>
+            <h2>Goals & Useful Links</h2>
+            <ul>
+                <li><a href="https://www.w3schools.com/html/" style="color: white;">Learn HTML</a></li>
+                <li><a href="https://www.github.com/" style="color: white;">GitHub</a></li>
+                <li><a href="https://www.stackoverflow.com/" style="color: white;">Stack Overflow</a></li>
+            </ul>
+        </div>
     </div>
 </div>
 
