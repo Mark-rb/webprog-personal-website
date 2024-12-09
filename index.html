@@ -1,125 +1,203 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
+        .item1 { grid-area: header; }
+        .item2 { grid-area: menu; }
+        .item3 { grid-area: main; }
+        .item4 { grid-area: right; }
+        .item5 { grid-area: footer; }
 
-        .container {
+        .grid-container {
             display: grid;
             grid-template-areas:
-                "header header"
-                "main sidebar"
-                "footer footer";
-            grid-template-columns: 3fr 1fr;
-            grid-template-rows: auto 1fr auto;
+                'header header header header header header'
+                'menu main main main right right'
+                'menu footer footer footer footer footer';
             gap: 10px;
+            background-color: #2196F3;
             padding: 10px;
         }
 
-        header {
-            grid-area: header;
-            background: #f4f4f4;
-            padding: 10px;
+        .grid-container > div {
+            background-color: rgba(255, 255, 255, 0.8);
             text-align: center;
+            padding: 20px;
+            font-size: 16px;
         }
 
-        main {
-            grid-area: main;
-            background: #fff;
-            padding: 10px;
+        .item1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ffffff;
+            border-radius: 5px;
         }
 
-        .main-content {
+        .item2 {
             display: flex;
             flex-direction: column;
-            gap: 10px;
-        }
-
-        aside.sidebar {
-            grid-area: sidebar;
-            background: #eaeaea;
+            align-items: flex-start;
+            gap: 8px;
             padding: 10px;
         }
 
-        footer {
-            grid-area: footer;
-            background: #f4f4f4;
+        .item3 {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            gap: 10px;
+            padding: 10px;
+            text-align: left;
+        }
+
+        .item4 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
             padding: 10px;
             text-align: center;
+        }
+
+        .item5 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 10px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            padding: 5px;
+        }
+
+        table {
+            margin: 10px auto;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 8px;
+            border: 1px solid #555;
+        }
+
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-areas:
+                    'header header header header header header'
+                    'menu menu'
+                    'main main'
+                    'right right'
+                    'footer footer';
+                gap: 8px;
+            }
+
+            .item3,
+            .item4,
+            .item2,
+            .item5 {
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .grid-container {
+                grid-template-areas:
+                    'header'
+                    'menu'
+                    'main'
+                    'right'
+                    'footer';
+            }
+
+            .item1,
+            .item2,
+            .item3,
+            .item4,
+            .item5 {
+                padding: 5px;
+            }
         }
     </style>
 </head>
 <body>
 
-<h1>About Me</h1>
-<p>Hello! I am Mark Revin O. Barbon passionate about learning and always eager to explore new opportunities in life. Welcome to my page!</p>
+<div class="grid-container">
+ 
+    <div class="item1">
+        <h1>About Me</h1>
+    </div>
 
-<h2>Education / Achievements</h2>
-<ul>
-    <li>College Undergrad</li>
-    <li>With Honor in Senior High School</li>
-</ul>
+    <div class="item2">
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#course">Course</a></li>
+            <li><a href="#hobbies">Hobbies</a></li>
+            <li><a href="#goals">Goals</a></li>
+        </ul>
+    </div>
 
-<h2>Course</h2>
-<p>Currently pursuing Information Technology Specialized in Mobile Internet.</p>
 
-<h2>IT Experience</h2>
-<table border="1">
-    <tr>
-        <th>Coding</th>
-        <th>Figma</th>
-        <th>Android Studio</th>
-    </tr>
-</table>
+    <div class="item3">
+        <h2>Introduction</h2>
+        <p>Hello! I am Mark Revin O. Barbon, passionate about learning and always eager to explore new opportunities in life. Welcome to my page!</p>
 
-<h2>Hobbies & Interests</h2>
-<ul>
-    <li>Gaming</li>
-    <li>Content Creator</li>
-    <li>Basketball</li>
-</ul>
+        <h2 id="education">Education / Achievements</h2>
+        <ul>
+            <li>College Undergrad</li>
+            <li>With Honor in Senior High School</li>
+        </ul>
 
-<h2>Goals in Life / Dream</h2>
-<p>My ultimate goal is to innovate solutions that make technology more accessible and impactful. I dream of creating a startup that bridges gaps in education using AI.</p>
+        <h2 id="course">Course</h2>
+        <p>Currently pursuing Information Technology specialized in Mobile Internet.</p>
 
-<h2>Picture Gallery</h2>
-<table>
-    <tr>
-        <td><img src="https://media.discordapp.net/attachments/1311356982304837694/1311357056288030831/me.jpg?ex=67488fee&is=67473e6e&hm=cf5b51fbc48bd65157024817ad1a2ec105b447a1faf25ca9611909255028611b&=&format=webp&width=279&height=419" alt="A person holding a camera" width="150" height="150"></td>
-    </tr>
-</table>
+        <h2>IT Experience</h2>
+        <table>
+            <tr>
+                <th>Coding</th>
+                <th>Figma</th>
+                <th>Android Studio</th>
+            </tr>
+            <tr>
+                <td>Intermediate</td>
+                <td>Beginner</td>
+                <td>Beginner</td>
+            </tr>
+        </table>
+    </div>
 
-<h2>Useful Links</h2>
-<ul>
-    <li><a href="https://www.w3schools.com/html/">Learn HTML</a></li>
-    <li><a href="https://www.github.com/">GitHub</a></li>
-    <li><a href="https://www.stackoverflow.com/">Stack Overflow</a></li>
-</ul>
+    <div class="item4">
+        <h2 id="hobbies">Hobbies & Interests</h2>
+        <ul>
+            <li>Gaming</li>
+            <li>Content Creator</li>
+            <li>Basketball</li>
+        </ul>
+        <h2>Picture Gallery</h2>
+        <img src="https://via.placeholder.com/150" alt="A placeholder image" width="150" height="150">
+    </div>
 
-<div class="container">
-    <header>
-        <h1>Welcome to My Layout</h1>
-    </header>
-    <main>
-        <section class="main-content">
-            <p>This is the main content area. It uses flexbox for better alignment of its items.</p>
-            <p>Enjoy exploring!</p>
-        </section>
-        <aside class="sidebar">
-            <h2>Sidebar</h2>
-            <p>Links, ads, or additional info goes here.</p>
-        </aside>
-    </main>
-    <footer>
-        <p>&copy; 2024 Mark Revin Barbon</p>
-    </footer>
+    <div class="item5">
+        <h2 id="goals">Goals in Life / Dream</h2>
+        <p>My ultimate goal is to innovate solutions that make technology more accessible and impactful. I dream of creating a startup that bridges gaps in education using AI.</p>
+        <h2>Useful Links</h2>
+        <ul>
+            <li><a href="https://www.w3schools.com/html/">Learn HTML</a></li>
+            <li><a href="https://www.github.com/">GitHub</a></li>
+            <li><a href="https://www.stackoverflow.com/">Stack Overflow</a></li>
+        </ul>
+    </div>
 </div>
 
 </body>
