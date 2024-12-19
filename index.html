@@ -1,6 +1,29 @@
 <html>
 <head>
     <title>About Me</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #toggleGoals {
+            margin-top: 10px;
+        }
+    </style>
+    <script>
+        function changeBackgroundColor() {
+            const colors = ["#f0f8ff", "#ffebcd", "#e6e6fa", "#ffe4e1"];
+            document.body.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+        }
+
+        function toggleGoalsSection() {
+            const goalsSection = document.getElementById("goalsSection");
+            if (goalsSection.style.display === "none") {
+                goalsSection.style.display = "block";
+            } else {
+                goalsSection.style.display = "none";
+            }
+        }
+    </script>
 </head>
 <body>
 
@@ -22,6 +45,7 @@
         <th>Coding</th>
         <th>Figma</th>
         <th>Android Studio</th>
+    </tr>
 </table>
 
 <h2>Hobbies & Interests</h2>
@@ -32,12 +56,16 @@
 </ul>
 
 <h2>Goals in Life / Dream</h2>
-<p>My ultimate goal is to innovate solutions that make technology more accessible and impactful. I dream of creating a startup that bridges gaps in education using AI.</p>
+<div id="goalsSection">
+    <p>My ultimate goal is to innovate solutions that make technology more accessible and impactful. I dream of creating a startup that bridges gaps in education using AI.</p>
+</div>
+<button id="toggleGoals" onclick="toggleGoalsSection()">Toggle Goals Section</button>
 
 <h2>Picture Gallery</h2>
 <table>
     <tr>
         <td><img src="https://media.discordapp.net/attachments/1311356982304837694/1311357056288030831/me.jpg?ex=67488fee&is=67473e6e&hm=cf5b51fbc48bd65157024817ad1a2ec105b447a1faf25ca9611909255028611b&=&format=webp&width=279&height=419" alt="A person holding a camera" width="150" height="150"></td>
+    </tr>
 </table>
 
 <h2>Useful Links</h2>
@@ -46,6 +74,9 @@
     <li><a href="https://www.github.com/">GitHub</a></li>
     <li><a href="https://www.stackoverflow.com/">Stack Overflow</a></li>
 </ul>
+
+
+<button onclick="changeBackgroundColor()">Change Background Color</button>
 
 </body>
 </html>
