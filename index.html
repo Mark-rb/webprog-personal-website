@@ -1,81 +1,135 @@
 <html>
 <head>
-    <title>About Me</title>
+    <title>Personal Profile Webpage</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-        }
-        #toggleGoals {
-            margin-top: 10px;
-        }
-    </style>
-    <script>
-        function changeBackgroundColor() {
-            const colors = ["#f0f8ff", "#ffebcd", "#e6e6fa", "#ffe4e1"];
-            document.body.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+            margin: 20px;
         }
 
-        function toggleGoalsSection() {
-            const goalsSection = document.getElementById("goalsSection");
-            if (goalsSection.style.display === "none") {
-                goalsSection.style.display = "block";
-            } else {
-                goalsSection.style.display = "none";
-            }
+        h1, h2 {
+            border-bottom: 2px solid #000;
+            padding-bottom: 5px;
         }
-    </script>
+
+        .profile-section {
+            margin-top: 20px;
+        }
+
+        img {
+            display: block;
+            margin: 10px 0;
+            width: 150px;
+            height: 150px;
+            border: 1px solid #ddd;
+        }
+
+        table {
+            margin-top: 20px;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin: 5px 0;
+        }
+    </style>
 </head>
 <body>
 
-<h1>About Me</h1>
-<p>Hello! I am Mark Revin O. Barbon passionate about learning and always eager to explore new opportunities in life. Welcome to my page!</p>
+<h1>Demo External JavaScript</h1>
+<p id="demo">The text in first paragraph (index 0) is: <span id="text">Paragraph changed.</span></p>
+<button onclick="function1()">Function1</button>
+<button onclick="function2()">Function2</button>
+<p>This example links to "myScript.js".</p>
+<p>(myFunction is stored in "myScript.js")</p>
 
-<h2>Education / Achievements</h2>
-<ul>
-    <li>College Undergrad</li>
-    <li>With Honor in Senior High School</li>
-</ul>
+<script>
+    function function1() {
+        document.getElementById('text').innerHTML = "Function 1 executed.";
+    }
 
-<h2>Course</h2>
-<p>Currently pursuing Information Technology Specialized in Mobile Internet.</p>
+    function function2() {
+        document.getElementById('text').innerHTML = "Function 2 executed.";
+    }
+</script>
 
-<h2>IT Experience</h2>
-<table border="1">
-    <tr>
-        <th>Coding</th>
-        <th>Figma</th>
-        <th>Android Studio</th>
-    </tr>
-</table>
+<h1>Personal Profile Webpage</h1>
 
-<h2>Hobbies & Interests</h2>
-<ul>
-    <li>Gaming</li>
-    <li>Content Creator</li>
-    <li>Basketball</li>
-</ul>
+<div class="profile-section">
+    <h2>About Me</h2>
+    <p>Hello! I am Mark Revin O. Barbon passionate about learning and always eager to explore new opportunities in life. Welcome to my page!</p>
+</div>
 
-<h2>Goals in Life / Dream</h2>
-<div id="goalsSection">
+<div class="profile-section">
+    <h2>Education / Achievements</h2>
+    <ul>
+        <li>College Undergrad</li>
+        <li>With Honor in Senior High School</li>
+    </ul>
+</div>
+
+<div class="profile-section">
+    <h2>Course</h2>
+    <p>Currently pursuing Information Technology Specialized in Mobile Internet.</p>
+</div>
+
+<div class="profile-section">
+    <h2>IT Experience</h2>
+    <table>
+        <tr>
+            <th>Coding</th>
+            <th>Figma</th>
+            <th>Android Studio</th>
+        </tr>
+    </table>
+</div>
+
+<div class="profile-section">
+    <h2>Hobbies & Interests</h2>
+    <ul>
+        <li>Gaming</li>
+        <li>Content Creator</li>
+        <li>Basketball</li>
+    </ul>
+</div>
+
+<div class="profile-section">
+    <h2>Goals in Life / Dream</h2>
     <p>My ultimate goal is to innovate solutions that make technology more accessible and impactful. I dream of creating a startup that bridges gaps in education using AI.</p>
 </div>
-<button id="toggleGoals" onclick="toggleGoalsSection()">Toggle Goals Section</button>
 
-<h2>Picture Gallery</h2>
-<table>
-    <tr>
-        <td><img src="https://media.discordapp.net/attachments/1311356982304837694/1311357056288030831/me.jpg?ex=67488fee&is=67473e6e&hm=cf5b51fbc48bd65157024817ad1a2ec105b447a1faf25ca9611909255028611b&=&format=webp&width=279&height=419" alt="A person holding a camera" width="150" height="150"></td>
-    </tr>
-</table>
+<div class="profile-section">
+    <h2>Picture Gallery</h2>
+    <table>
+        <tr>
+            <td>
+                <img src="https://media.discordapp.net/attachments/1311356982304837694/1311357056288030831/me.jpg?ex=67488fee&is=67473e6e&hm=cf5b51fbc48bd65157024817ad1a2ec105b447a1faf25ca9611909255028611b&=&format=webp&width=279&height=419" 
+                     alt="A person holding a camera">
+            </td>
+        </tr>
+    </table>
+</div>
 
-<h2>Useful Links</h2>
-<ul>
-    <li><a href="https://www.w3schools.com/html/">Learn HTML</a></li>
-    <li><a href="https://www.github.com/">GitHub</a></li>
-    <li><a href="https://www.stackoverflow.com/">Stack Overflow</a></li>
-</ul>
-
-<button onclick="changeBackgroundColor()">Change Background Color</button>
+<div class="profile-section">
+    <h2>Useful Links</h2>
+    <ul>
+        <li><a href="https://www.w3schools.com/html/">Learn HTML</a></li>
+        <li><a href="https://www.github.com/">GitHub</a></li>
+        <li><a href="https://www.stackoverflow.com/">Stack Overflow</a></li>
+    </ul>
+</div>
 
 </body>
 </html>
