@@ -1,31 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>About Me</title>
+    <title>Personal Profile Web Page</title>
     <script>
-        function showName() {
-            alert("Hello, I am Mark Revin O. Barbon!");
+        function changeParagraph() {
+            document.getElementById("demo").textContent = "Hello! I am Mark Revin O. Barbon, passionate about learning and always eager to explore new opportunities.";
         }
 
-        function addAchievement() {
-            const ul = document.getElementById("achievements-list");
-            const newItem = document.createElement("li");
-            newItem.textContent = "Completed a Web Development Course";
-            ul.appendChild(newItem);
+        function externalFunction() {
+            alert("My ultimate goal is to innovate solutions that make technology more accessible and impactful.");
         }
     </script>
 </head>
 <body>
 
-<h1>About Me</h1>
-<p>Hello! I am Mark Revin O. Barbon passionate about learning and always eager to explore new opportunities in life. Welcome to my page!</p>
+<h1>Personal Profile Web Page</h1>
+<ul>
+    <li>About Me</li>
+    <li>Education / Achievements</li>
+    <li>Course</li>
+    <li>IT Experience</li>
+    <li>Hobbies & Interests</li>
+    <li>Goals in Life / Dream</li>
+    <li>Picture Gallery</li>
+</ul>
+
+<h2>Demo External JavaScript</h2>
+<p id="demo">This is a paragraph.</p>
+<button onclick="changeParagraph()">Function1</button>
+<button onclick="externalFunction()">Function2</button>
+
+<p>This example links to "myScript.js".</p>
+<p>(myFunction is stored in "myScript.js")</p>
+
+<h2>About Me</h2>
+<p>Hello! I am Mark Revin O. Barbon, passionate about learning and always eager to explore new opportunities in life. Welcome to my page!</p>
 
 <h2>Education / Achievements</h2>
-<ul id="achievements-list">
+<ul>
     <li>College Undergrad</li>
     <li>With Honor in Senior High School</li>
 </ul>
-<button onclick="addAchievement()">Add Achievement</button>
 
 <h2>Course</h2>
 <p>Currently pursuing Information Technology Specialized in Mobile Internet.</p>
@@ -55,15 +70,6 @@
         <td><img src="https://media.discordapp.net/attachments/1311356982304837694/1311357056288030831/me.jpg?ex=67488fee&is=67473e6e&hm=cf5b51fbc48bd65157024817ad1a2ec105b447a1faf25ca9611909255028611b&=&format=webp&width=279&height=419" alt="A person holding a camera" width="150" height="150"></td>
     </tr>
 </table>
-
-<h2>Useful Links</h2>
-<ul>
-    <li><a href="https://www.w3schools.com/html/">Learn HTML</a></li>
-    <li><a href="https://www.github.com/">GitHub</a></li>
-    <li><a href="https://www.stackoverflow.com/">Stack Overflow</a></li>
-</ul>
-
-<button onclick="showName()">Show Name</button>
 
 </body>
 </html>
