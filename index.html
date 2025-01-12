@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me - Mark Revin O. Barbon</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <style>
-        /* Black and White Theme */
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
@@ -159,6 +159,7 @@
         <a onclick="showSection('hobbies')">Hobbies</a>
         <a onclick="showSection('goals')">Goals</a>
         <a onclick="showSection('gallery')">Gallery</a>
+        <a onclick="showSection('comments')">Comments</a>
     </nav>
 </header>
 
@@ -225,9 +226,68 @@
 <main id="gallery">
     <section>
         <h2>Picture Gallery</h2>
-        <div class="gallery">
-            <img src="https://media.discordapp.net/attachments/1311356982304837694/1311357056288030831/me.jpg?ex=67488fee&is=67473e6e&hm=cf5b51fbc48bd65157024817ad1a2ec105b447a1faf25ca9611909255028611b&=&format=webp&width=279&height=419" alt="A person holding a camera">
+        <div id="galleryApp" class="gallery">
+            <div v-for="image in images" :key="image.id">
+                <img :src="image.url" :alt="image.alt">
+            </div>
         </div>
+        <script>
+            new Vue({
+                el: '#galleryApp',
+                data: {
+                    images: [
+                        { id: 1, url: 'https://media.discordapp.net/attachments/1311356982304837694/1311357056288030831/me.jpg?ex=67488fee&is=67473e6e&hm=cf5b51fbc48bd65157024817ad1a2ec105b447a1faf25ca9611909255028611b&=&format=webp&width=279&height=419', alt: 'A person holding a camera' }
+                    ]
+                }
+            });
+        </script>
+    </section>
+</main>
+
+<main id="comments">
+    <section>
+        <h2>Comments/Guestbook</h2>
+        <div id="commentsApp">
+            <form @submit.prevent="addComment">
+                <label for="name">Name:</label>
+                <input type="text" id="name" v-model="newComment.name" required>
+
+                <label for="comment">Comment:</label>
+                <textarea id="comment" v-model="newComment.comment" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+            <ul>
+                <li v-for="comment in comments" :key="comment.id">
+                    <strong>{{ comment.name }}</strong>: {{ comment.comment }}
+                </li>
+            </ul>
+        </div>
+        <script>
+            new Vue({
+                el: '#commentsApp',
+                data: {
+                    newComment: {
+                        name: '',
+                        comment: ''
+                    },
+                    comments: []
+                },
+                methods: {
+                    addComment() {
+                        if (this.newComment.name && this.newComment.comment) {
+                            this.comments.push({
+                                id: Date.now(),
+                                name: this.newComment.name,
+                                comment: this.newComment.comment
+                            });
+                            this.newComment.name = '';
+                            this.newComment.comment = '';
+                        }
+                    }
+                }
+            });
+        </script>
     </section>
 </main>
 
