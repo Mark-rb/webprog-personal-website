@@ -1,51 +1,198 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>About Me</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Mark Revin O. Barbon</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background: #0078d7;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #0078d7;
+            border-bottom: 2px solid #0078d7;
+            padding-bottom: 5px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            background: #f4f4f9;
+            margin: 5px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        table th {
+            background-color: #0078d7;
+            color: #fff;
+        }
+
+        .gallery img {
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background: #0078d7;
+            color: #fff;
+            position: relative;
+        }
+
+        footer a {
+            color: #ffcc00;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
 
-<h1>About Me</h1>
-<p>Hello! I am Mark Revin O. Barbon passionate about learning and always eager to explore new opportunities in life. Welcome to my page!</p>
+<header>
+    <h1>Welcome to My Page</h1>
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#education">Education</a>
+        <a href="#course">Course</a>
+        <a href="#experience">Experience</a>
+        <a href="#hobbies">Hobbies</a>
+        <a href="#goals">Goals</a>
+    </nav>
+</header>
 
-<h2>Education / Achievements</h2>
-<ul>
-    <li>College Undergrad</li>
-    <li>With Honor in Senior High School</li>
-</ul>
+<main>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hello! I am <strong>Mark Revin O. Barbon</strong>, passionate about learning and always eager to explore new opportunities in life. Welcome to my page!</p>
+    </section>
 
-<h2>Course</h2>
-<p>Currently pursuing Information Technology Specialized in Mobile Internet.</p>
+    <section id="education">
+        <h2>Education / Achievements</h2>
+        <ul>
+            <li>College Undergrad</li>
+            <li>With Honor in Senior High School</li>
+        </ul>
+    </section>
 
-<h2>IT Experience</h2>
-<table border="1">
-    <tr>
-        <th>Coding</th>
-        <th>Figma</th>
-        <th>Android Studio</th>
-</table>
+    <section id="course">
+        <h2>Course</h2>
+        <p>Currently pursuing Information Technology Specialized in Mobile Internet.</p>
+    </section>
 
-<h2>Hobbies & Interests</h2>
-<ul>
-    <li>Gaming</li>
-    <li>Content Creator</li>
-    <li>Basketball</li>
-</ul>
+    <section id="experience">
+        <h2>IT Experience</h2>
+        <table>
+            <tr>
+                <th>Coding</th>
+                <th>Figma</th>
+                <th>Android Studio</th>
+            </tr>
+            <tr>
+                <td>Proficient</td>
+                <td>Intermediate</td>
+                <td>Advanced</td>
+            </tr>
+        </table>
+    </section>
 
-<h2>Goals in Life / Dream</h2>
-<p>My ultimate goal is to innovate solutions that make technology more accessible and impactful. I dream of creating a startup that bridges gaps in education using AI.</p>
+    <section id="hobbies">
+        <h2>Hobbies & Interests</h2>
+        <ul>
+            <li>Gaming</li>
+            <li>Content Creation</li>
+            <li>Basketball</li>
+        </ul>
+    </section>
 
-<h2>Picture Gallery</h2>
-<table>
-    <tr>
-        <td><img src="https://media.discordapp.net/attachments/1311356982304837694/1311357056288030831/me.jpg?ex=67488fee&is=67473e6e&hm=cf5b51fbc48bd65157024817ad1a2ec105b447a1faf25ca9611909255028611b&=&format=webp&width=279&height=419" alt="A person holding a camera" width="150" height="150"></td>
-</table>
+    <section id="goals">
+        <h2>Goals in Life / Dream</h2>
+        <p>My ultimate goal is to innovate solutions that make technology more accessible and impactful. I dream of creating a startup that bridges gaps in education using AI.</p>
+    </section>
 
-<h2>Useful Links</h2>
-<ul>
-    <li><a href="https://www.w3schools.com/html/">Learn HTML</a></li>
-    <li><a href="https://www.github.com/">GitHub</a></li>
-    <li><a href="https://www.stackoverflow.com/">Stack Overflow</a></li>
-</ul>
+    <section id="gallery">
+        <h2>Picture Gallery</h2>
+        <div class="gallery">
+            <img src="https://media.discordapp.net/attachments/1311356982304837694/1311357056288030831/me.jpg?ex=67488fee&is=67473e6e&hm=cf5b51fbc48bd65157024817ad1a2ec105b447a1faf25ca9611909255028611b&=&format=webp&width=279&height=419" alt="A person holding a camera" width="150" height="150">
+        </div>
+    </section>
+
+    <section id="links">
+        <h2>Useful Links</h2>
+        <ul>
+            <li><a href="https://www.w3schools.com/html/" target="_blank">Learn HTML</a></li>
+            <li><a href="https://www.github.com/" target="_blank">GitHub</a></li>
+            <li><a href="https://www.stackoverflow.com/" target="_blank">Stack Overflow</a></li>
+        </ul>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Mark Revin O. Barbon. Built with passion and creativity. <a href="#">Back to top</a></p>
+</footer>
 
 </body>
 </html>
