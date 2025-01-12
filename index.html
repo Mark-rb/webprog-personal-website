@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me - Mark Revin O. Barbon</title>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -134,6 +133,48 @@
                 margin: 10px 0;
             }
         }
+
+        .form-container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #222;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+        }
+
+        .form-container h2 {
+            margin-bottom: 20px;
+        }
+
+        .form-container label {
+            display: block;
+            margin-bottom: 10px;
+            color: #ccc;
+        }
+
+        .form-container input, .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #444;
+            border-radius: 5px;
+            background: #333;
+            color: #fff;
+        }
+
+        .form-container button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background: #555;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .form-container button:hover {
+            background: #666;
+        }
     </style>
     <script>
         function showSection(sectionId) {
@@ -145,6 +186,56 @@
                 targetSection.classList.add('active');
             }
         }
+
+        class PictureGallery {
+            constructor(containerId) {
+                this.container = document.getElementById(containerId);
+                this.images = this.container.querySelectorAll('img');
+                this.currentIndex = 0;
+                this.init();
+            }
+
+            init() {
+                this.images.forEach((img, index) => {
+                    img.addEventListener('click', () => this.showImage(index));
+                });
+            }
+
+            showImage(index) {
+                this.currentIndex = index;
+                this.images.forEach((img, idx) => {
+                    img.style.opacity = idx === index ? 1 : 0.5;
+                });
+            }
+        }
+
+        class GuestbookForm {
+            constructor(formId) {
+                this.form = document.getElementById(formId);
+                this.init();
+            }
+
+            init() {
+                this.form.addEventListener('submit', this.handleSubmit.bind(this));
+            }
+
+            handleSubmit(event) {
+                event.preventDefault();
+                const formData = new FormData(this.form);
+                const data = {};
+                formData.forEach((value, key) => {
+                    data[key] = value;
+                });
+                console.log('Form Data:', data);
+                alert('Thank you for your submission!');
+                this.form.reset();
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            new PictureGallery('gallery');
+            new GuestbookForm('guestbook-form');
+        });
     </script>
 </head>
 <body>
@@ -159,7 +250,7 @@
         <a onclick="showSection('hobbies')">Hobbies</a>
         <a onclick="showSection('goals')">Goals</a>
         <a onclick="showSection('gallery')">Gallery</a>
-        <a onclick="showSection('comments')">Comments</a>
+        <a onclick="showSection('guestbook')">Guestbook</a>
     </nav>
 </header>
 
@@ -226,73 +317,34 @@
 <main id="gallery">
     <section>
         <h2>Picture Gallery</h2>
-        <div id="galleryApp" class="gallery">
-            <div v-for="image in images" :key="image.id">
-                <img :src="image.url" :alt="image.alt">
-            </div>
+        <div class="gallery" id="gallery">
+            <img src="images/me.jpg" alt="A person holding a camera">
         </div>
-        <script>
-            new Vue({
-                el: '#galleryApp',
-                data: {
-                    images: [
-                        { id: 1, url: 'https://media.discordapp.net/attachments/1311356982304837694/1311357056288030831/me.jpg?ex=67488fee&is=67473e6e&hm=cf5b51fbc48bd65157024817ad1a2ec105b447a1faf25ca9611909255028611b&=&format=webp&width=279&height=419', alt: 'A person holding a camera' }
-                    ]
-                }
-            });
-        </script>
     </section>
 </main>
 
-<main id="comments">
+<main id="guestbook">
     <section>
-        <h2>Comments/Guestbook</h2>
-        <div id="commentsApp">
-            <form @submit.prevent="addComment">
+        <h2>Survey/Comments/Guestbook</h2>
+        <div class="form-container">
+            <form id="guestbook-form">
                 <label for="name">Name:</label>
-                <input type="text" id="name" v-model="newComment.name" required>
+                <input type="text" id="name" name="name" required>
 
-                <label for="comment">Comment:</label>
-                <textarea id="comment" v-model="newComment.comment" required></textarea>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="comments">Comments:</label>
+                <textarea id="comments" name="comments" rows="4" required></textarea>
 
                 <button type="submit">Submit</button>
             </form>
-            <ul>
-                <li v-for="comment in comments" :key="comment.id">
-                    <strong>{{ comment.name }}</strong>: {{ comment.comment }}
-                </li>
-            </ul>
         </div>
-        <script>
-            new Vue({
-                el: '#commentsApp',
-                data: {
-                    newComment: {
-                        name: '',
-                        comment: ''
-                    },
-                    comments: []
-                },
-                methods: {
-                    addComment() {
-                        if (this.newComment.name && this.newComment.comment) {
-                            this.comments.push({
-                                id: Date.now(),
-                                name: this.newComment.name,
-                                comment: this.newComment.comment
-                            });
-                            this.newComment.name = '';
-                            this.newComment.comment = '';
-                        }
-                    }
-                }
-            });
-        </script>
     </section>
 </main>
 
 <footer>
-    <p>&copy; 2025 Mark Revin O. Barbon. Built with passion and creativity. <a href="#">Back to top</a></p>
+    <p>&copy; 2025 Mark Revin O. Barbon. Built with passion and creativity.
 </footer>
 
 </body>
