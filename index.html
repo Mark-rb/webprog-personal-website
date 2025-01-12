@@ -35,6 +35,7 @@
             text-decoration: none;
             margin: 0 15px;
             font-size: 18px;
+            cursor: pointer;
         }
 
         nav a:hover {
@@ -48,6 +49,11 @@
             background: #fff;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+
+        main.active {
+            display: block;
         }
 
         h2 {
@@ -108,42 +114,70 @@
         footer a:hover {
             text-decoration: underline;
         }
+
+        @media (max-width: 768px) {
+            main {
+                padding: 10px;
+            }
+
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+        }
     </style>
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('main');
+            sections.forEach(section => section.classList.remove('active'));
+
+            const targetSection = document.getElementById(sectionId);
+            if (targetSection) {
+                targetSection.classList.add('active');
+            }
+        }
+    </script>
 </head>
 <body>
 
 <header>
     <h1>Welcome to My Page</h1>
     <nav>
-        <a href="#about">About Me</a>
-        <a href="#education">Education</a>
-        <a href="#course">Course</a>
-        <a href="#experience">Experience</a>
-        <a href="#hobbies">Hobbies</a>
-        <a href="#goals">Goals</a>
+        <a onclick="showSection('about')">About Me</a>
+        <a onclick="showSection('education')">Education</a>
+        <a onclick="showSection('course')">Course</a>
+        <a onclick="showSection('experience')">Experience</a>
+        <a onclick="showSection('hobbies')">Hobbies</a>
+        <a onclick="showSection('goals')">Goals</a>
     </nav>
 </header>
 
-<main>
-    <section id="about">
+<main id="about" class="active">
+    <section>
         <h2>About Me</h2>
         <p>Hello! I am <strong>Mark Revin O. Barbon</strong>, passionate about learning and always eager to explore new opportunities in life. Welcome to my page!</p>
     </section>
+</main>
 
-    <section id="education">
+<main id="education">
+    <section>
         <h2>Education / Achievements</h2>
         <ul>
             <li>College Undergrad</li>
             <li>With Honor in Senior High School</li>
         </ul>
     </section>
+</main>
 
-    <section id="course">
+<main id="course">
+    <section>
         <h2>Course</h2>
         <p>Currently pursuing Information Technology Specialized in Mobile Internet.</p>
     </section>
+</main>
 
-    <section id="experience">
+<main id="experience">
+    <section>
         <h2>IT Experience</h2>
         <table>
             <tr>
@@ -158,8 +192,10 @@
             </tr>
         </table>
     </section>
+</main>
 
-    <section id="hobbies">
+<main id="hobbies">
+    <section>
         <h2>Hobbies & Interests</h2>
         <ul>
             <li>Gaming</li>
@@ -167,26 +203,12 @@
             <li>Basketball</li>
         </ul>
     </section>
+</main>
 
-    <section id="goals">
+<main id="goals">
+    <section>
         <h2>Goals in Life / Dream</h2>
         <p>My ultimate goal is to innovate solutions that make technology more accessible and impactful. I dream of creating a startup that bridges gaps in education using AI.</p>
-    </section>
-
-    <section id="gallery">
-        <h2>Picture Gallery</h2>
-        <div class="gallery">
-            <img src="https://media.discordapp.net/attachments/1311356982304837694/1311357056288030831/me.jpg?ex=67488fee&is=67473e6e&hm=cf5b51fbc48bd65157024817ad1a2ec105b447a1faf25ca9611909255028611b&=&format=webp&width=279&height=419" alt="A person holding a camera" width="150" height="150">
-        </div>
-    </section>
-
-    <section id="links">
-        <h2>Useful Links</h2>
-        <ul>
-            <li><a href="https://www.w3schools.com/html/" target="_blank">Learn HTML</a></li>
-            <li><a href="https://www.github.com/" target="_blank">GitHub</a></li>
-            <li><a href="https://www.stackoverflow.com/" target="_blank">Stack Overflow</a></li>
-        </ul>
     </section>
 </main>
 
