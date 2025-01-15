@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
         introSection.classList.add('hide');
         mainContent.classList.remove('hidden');
         
-        // Remove intro section after animation
         setTimeout(() => {
             introSection.style.display = 'none';
         }, 800);
@@ -16,22 +15,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const navItems = document.querySelectorAll('nav li');
     const sections = document.querySelectorAll('.content-section');
 
-    // Show about section by default
     document.getElementById('about').classList.add('active');
 
     navItems.forEach(item => {
         item.addEventListener('click', () => {
             const sectionId = item.getAttribute('data-section');
             
-            // Remove active class from all sections
             sections.forEach(section => {
                 section.classList.remove('active');
             });
 
-            // Add active class to selected section
             document.getElementById(sectionId).classList.add('active');
 
-            // Update active nav item
             navItems.forEach(navItem => {
                 navItem.classList.remove('active');
             });
@@ -39,7 +34,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Add scroll reveal animation
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px'
@@ -57,7 +51,6 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
-    // Add typing effect for intro text
     function typeEffect(element, speed) {
         const text = element.innerHTML;
         element.innerHTML = '';
@@ -73,11 +66,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }, speed);
     }
 
-    // Initialize typing effect
     document.querySelector('.intro') && 
         typeEffect(document.querySelector('.intro'), 100);
 
-    // Add survey form submission handler
     const surveyForm = document.querySelector('#survey-form');
     if (surveyForm) {
         surveyForm.addEventListener('submit', (e) => {
@@ -88,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (permission === 'granted') {
                         new Notification('Survey Submitted', {
                             body: 'Thank you for your feedback!',
-                            icon: '/path/to/icon.png' // Optional: Add your website icon
+                            icon: '/path/to/icon.png'
                         });
                     } else {
                         alert('Thank you for your feedback!');
@@ -102,7 +93,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Add logo click handler
     const logo = document.querySelector('.logo');
     logo.addEventListener('click', () => {
         introSection.style.display = 'flex';
@@ -110,12 +100,10 @@ document.addEventListener('DOMContentLoaded', () => {
         introSection.classList.add('return-transition');
         mainContent.classList.add('hidden');
         
-        // Remove the animation class after it completes
         setTimeout(() => {
             introSection.classList.remove('return-transition');
         }, 800);
         
-        // Reset active states
         sections.forEach(section => {
             section.classList.remove('active');
         });
