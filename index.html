@@ -3,151 +3,202 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            background: linear-gradient(to right, #6a11cb, #2575fc);
-            color: #fff;
-        }
-
-        header {
-            background: #333;
-            color: #fff;
-            padding: 1rem 0;
-            text-align: center;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: auto;
-            overflow: hidden;
-            padding: 0 2rem;
-        }
-
-        h1, h2 {
-            color: #ffd700;
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        ul li {
-            background: #444;
-            margin: 0.5rem 0;
-            padding: 0.5rem;
-            border-radius: 5px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 1rem 0;
-            background: #444;
-            border-radius: 5px;
-            overflow: hidden;
-        }
-
-        table th, table td {
-            padding: 1rem;
-            text-align: center;
-            border: 1px solid #fff;
-        }
-
-        img {
-            border-radius: 50%;
-            border: 2px solid #ffd700;
-        }
-
-        .gallery img {
-            width: 150px;
-            height: 150px;
-            margin: 1rem;
-        }
-
-        a {
-            color: #ffd700;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        footer {
-            text-align: center;
-            padding: 1rem 0;
-            background: #222;
-            margin-top: 2rem;
-        }
-
-        .flex {
-            display: flex;
-            gap: 2rem;
-            flex-wrap: wrap;
-        }
-    </style>
+    <title>Mark Revin Barbon - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Page</h1>
-        <p>Hello! I'm Mark Revin O. Barbon. Passionate about learning and eager to explore new opportunities.</p>
-    </header>
+    <div id="intro-section" class="intro-section">
+        <div class="profile-container">
+            <div class="profile-image">
+                <!-- Replace 'your-image.jpg' with your actual image path -->
+                <img src="images/image1.jpg" alt="Mark Revin Barbon">
+            </div>
+            <button id="enter-button" class="enter-button">
+                <span>Click Me</span>
+                <i class="fas fa-arrow-right"></i>
+            </button>
+            <div class="intro-social-links">
+                <a href="https://www.facebook.com/markrevin.barbon.7" target="_blank" class="intro-social-icon">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/mr.lutangggg/" target="_blank" class="intro-social-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/mark-revin-barbon-168b42288/" target="_blank" class="intro-social-icon">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+    </div>
 
-    <section class="container">
-        <h2>Education / Achievements</h2>
-        <ul>
-            <li>College Undergrad</li>
-            <li>With Honor in Senior High School</li>
-        </ul>
+    <div id="main-content" class="main-content hidden">
+        <nav>
+            <div class="nav-container">
+                <div class="logo">MB</div>
+                <ul>
+                    <li data-section="about">About</li>
+                    <li data-section="education">Education</li>
+                    <li data-section="experience">Experience</li>
+                    <li data-section="hobbies">Hobbies</li>
+                    <li data-section="goals">Goals</li>
+                    <li data-section="gallery">Gallery</li>
+                    <li data-section="survey">Survey</li>
+                </ul>
+            </div>
+        </nav>
 
-        <h2>Course</h2>
-        <p>Currently pursuing Information Technology specialized in Mobile Internet.</p>
+        <main>
+            <div class="content-section" id="about">
+                <h1><i class="fas fa-user-circle"></i> About Me</h1>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p class="intro">Hello, I'm Mark Revin Barbon! 👋</p>
+                        <p>As a passionate gamer and content creator, I bring creativity and technical expertise together. My journey in the tech world started with my fascination for how things work in the digital space.</p>
+                        <p>Currently pursuing my IT degree, I balance my academic life with my role as a content creator on TikTok, where I share my gaming experiences and tech insights with my growing community.</p>
+                        <div class="social-links">
+                            <a href="https://www.tiktok.com/@mr.lutangggg" target="_blank" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                            <a href="https://github.com/mark-rb" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/mark-revin-barbon-168b42288/" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="profile-card">
+                        <div class="profile-stats">
+                            <div class="stat">
+                                <i class="fas fa-code"></i>
+                                <span>Technology Enthusiast</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-gamepad"></i>
+                                <span>Avid Gamer</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-video"></i>
+                                <span>Content Creator</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-        <h2>IT Experience</h2>
-        <table>
-            <tr>
-                <th>Coding</th>
-                <th>Figma</th>
-                <th>Android Studio</th>
-            </tr>
-            <tr>
-                <td>Beginner</td>
-                <td>Intermediate</td>
-                <td>Intermediate</td>
-            </tr>
-        </table>
-
-        <h2>Hobbies & Interests</h2>
-        <ul>
-            <li>Gaming</li>
-            <li>Content Creation</li>
-            <li>Basketball</li>
-        </ul>
-
-        <h2>Goals in Life / Dream</h2>
-        <p>My ultimate goal is to innovate solutions that make technology more accessible and impactful. I dream of creating a startup that bridges gaps in education using AI.</p>
-
-        <h2>Picture Gallery</h2>
-        <div class="gallery flex">
-            <img src="https://media.discordapp.net/attachments/1311356982304837694/1311357056288030831/me.jpg?ex=67488fee&is=67473e6e&hm=cf5b51fbc48bd65157024817ad1a2ec105b447a1faf25ca9611909255028611b&=&format=webp&width=279&height=419" alt="A person holding a camera">
+            <div class="content-section" id="education">
+                <h1><i class="fas fa-graduation-cap"></i> Education Journey</h1>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Bachelor of Information Technology</h3>
+                            <p class="timeline-date">2024 - Present</p>
+                            <p>Specializing in Mobile Internet Technology</p>
+                        <ul class="achievements">
+                            <li>Active member of the IT Society</li>
+                            <li>Focus on mobile app development and web technologies</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Senior High School</h3>
+                        <p class="timeline-date">2021 - 2023</p>
+                        <p>Graduated with Honors</p>
+                        <ul class="achievements">
+                            <li>Academic Excellence Award</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <h2>Useful Links</h2>
-        <ul>
-            <li><a href="https://www.w3schools.com/html/" target="_blank">Learn HTML</a></li>
-            <li><a href="https://www.github.com/" target="_blank">GitHub</a></li>
-            <li><a href="https://www.stackoverflow.com/" target="_blank">Stack Overflow</a></li>
-        </ul>
-    </section>
+        <div class="content-section" id="experience">
+            <h1><i class="fas fa-laptop-code"></i> Tech Skills & Experience</h1>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Development</h3>
+                    <div class="skills">
+                        <span class="skill-item"><i class="fas fa-code"></i> HTML/CSS</span>
+                        <span class="skill-item"><i class="fab fa-js"></i> JavaScript</span>
+                        <span class="skill-item"><i class="fab fa-java"></i> Java</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Design</h3>
+                    <div class="skills">
+                        <span class="skill-item"><i class="fab fa-figma"></i> Figma</span>
+                        <span class="skill-item"><i class="fas fa-paint-brush"></i> UI/UX</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Mobile Development</h3>
+                    <div class="skills">
+                        <span class="skill-item"><i class="fab fa-android"></i> Android Studio</span>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    <footer>
-        <p>&copy; 2024 Mark Revin O. Barbon</p>
-    </footer>
+        <div class="content-section" id="hobbies">
+            <h1>Hobbies & Interests</h1>
+            <div class="hobby-list">
+                <div>Gaming</div>
+                <div>Content Creation</div>
+                <div>Watching Anime</div>
+            </div>
+        </div>
+
+        <div class="content-section" id="goals">
+            <h1>Goals</h1>
+            <p>My main goal is to finish my college degree in IT and build a successful career that will provide a stable life for me and my family. I also want to continue pursuing my passion for gaming by creating content.</p>
+        </div>
+
+        <div class="content-section" id="gallery">
+            <h1><i class="fas fa-images"></i> Gallery</h1>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/image1.jpg" alt="Gallery Image 1">
+                    <div class="gallery-overlay">
+                        <span>Pogi ako diba?</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/image2.jpg" alt="Gallery Image 2">
+                    <div class="gallery-overlay">
+                        <span>Tignan mo to pogi</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/image3.jpg" alt="Gallery Image 3">
+                    <div class="gallery-overlay">
+                        <span>Pinakapogi kasi saviour</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/image4.jpg" alt="Gallery Image 4">
+                    <div class="gallery-overlay">
+                        <span>Sige out muna ko</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section" id="survey">
+            <h1><i class="fas fa-poll"></i> Quick Survey</h1>
+            <form class="survey-form">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="feedback">Your Feedback</label>
+                    <textarea id="feedback" rows="4"></textarea>
+                </div>
+                <button type="submit" class="survey-submit">Submit</button>
+            </form>
+        </div>
+    </main>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
